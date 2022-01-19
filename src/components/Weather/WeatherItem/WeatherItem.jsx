@@ -5,7 +5,7 @@ const WeatherIcon = {
   sunrise: 'assets/sun-outline.svg',
   wind: 'assets/wind.svg',
   humidity: 'assets/humidity.svg',
-  pressure: 'assets/pressure.svg'
+  pressure: 'assets/pressure.svg',
 };
 
 const WeatherItem = ({ condition, value }) => {

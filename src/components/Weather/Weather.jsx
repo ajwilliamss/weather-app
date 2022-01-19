@@ -15,7 +15,7 @@ const WeatherIcons = {
   '10d': 'assets/clouds.svg',
   '10n': 'assets/rain-night.svg',
   '11d': 'assets/storm.svg',
-  '11n': 'assets/storm.svg'
+  '11n': 'assets/storm.svg',
 };
 
 const Weather = ({ weather }) => {
