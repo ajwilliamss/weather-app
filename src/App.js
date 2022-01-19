@@ -1,10 +1,10 @@
-import { useState } from 'react';
-import { GlobalStyle, Container, Title } from './AppStyle';
-import Search from './components/Search/Search';
-import Weather from './components/Weather/Weather';
-import axios from 'axios';
+import { useState } from "react";
+import { GlobalStyle, Container, Title } from "./AppStyle";
+import Search from "./components/Search/Search";
+import Weather from "./components/Weather/Weather";
+import axios from "axios";
 
-const API_KEY = '5b43738a97eb5af0e3791cca7a6f14c3';
+const API_KEY = "5b43738a97eb5af0e3791cca7a6f14c3";
 
 function App() {
   const [input, setInput] = useState(null);
@@ -27,7 +27,11 @@ function App() {
     <Container>
       <GlobalStyle />
       <Title>Weather App</Title>
-      {data ? <Weather weather={data} /> : <Search updateInput={setInput} getWeather={fetchWeather} />}
+      {data ? (
+        <Weather weather={data} />
+      ) : (
+        <Search updateInput={setInput} getWeather={fetchWeather} />
+      )}
     </Container>
   );
 }
