@@ -1,4 +1,4 @@
-import { DetailsContainer, DetailsIcon, Details } from "./WeatherItemStyle";
+import { DetailsContainer, DetailsIcon, Details } from './WeatherItemStyle';
 
 const WeatherIcon = {
     sunset: 'assets/sun-outline.svg',
