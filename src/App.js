@@ -26,7 +26,9 @@ function App() {
   return (
     <Container>
       <GlobalStyle />
-      <Title>Weather App</Title>
+      <Title>
+        <a href="/">Weather App</a>
+      </Title>
       {data ? (
         <Weather weather={data} />
       ) : (

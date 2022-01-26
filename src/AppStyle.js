@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@400;600&display=swap');
@@ -33,4 +33,8 @@ export const Container = styled.div`
 export const Title = styled.span`
   font-size: 2rem;
   font-weight: 600;
+  & a {
+    text-decoration: none;
+    color: black;
+  }
 `;

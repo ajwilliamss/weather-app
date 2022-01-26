@@ -26,7 +26,7 @@ const WeatherIcons = {
 };
 
 const Weather = ({ weather }) => {
-  const isDay = weather?.weather[0].icon?.includes("d");
+  const isDay = weather.weather[0].icon.includes("d");
 
   const getTime = (time) => {
     return `${new Date(time * 1000).getHours()}:${new Date(
@@ -37,24 +37,24 @@ const Weather = ({ weather }) => {
   return (
     <>
       <WeatherInfo>
-        <Temperature>{`${Math.floor(weather?.main?.temp - 273)}°C - ${
-          weather?.weather[0].description
+        <Temperature>{`${Math.floor(weather.main.temp - 273)}°C - ${
+          weather.weather[0].description
         }`}</Temperature>
         <WeatherImage
-          src={WeatherIcons[weather?.weather[0].icon]}
+          src={WeatherIcons[weather.weather[0].icon]}
           alt="Weather"
         />
       </WeatherInfo>
-      <City>{`${weather?.name}, ${weather?.sys?.country}`}</City>
+      <City>{`${weather.name}, ${weather.sys.country}`}</City>
       <WeatherDetails>Weather Details:</WeatherDetails>
       <WeatherContainer>
         <WeatherItem
           condition={isDay ? "sunset" : "sunrise"}
-          value={`${getTime(weather?.sys[isDay ? "sunset" : "sunrise"])}`}
+          value={`${getTime(weather.sys[isDay ? "sunset" : "sunrise"])}`}
         />
-        <WeatherItem condition="wind" value={weather?.wind?.speed} />
-        <WeatherItem condition="humidity" value={weather?.main?.humidity} />
-        <WeatherItem condition="pressure" value={weather?.main?.pressure} />
+        <WeatherItem condition="wind" value={weather.wind.speed} />
+        <WeatherItem condition="humidity" value={weather.main.humidity} />
+        <WeatherItem condition="pressure" value={weather.main.pressure} />
       </WeatherContainer>
     </>
   );
